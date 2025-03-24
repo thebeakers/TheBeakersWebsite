@@ -1,27 +1,20 @@
-<script>
-	import Question from '$lib/Questions/question.svelte';
-	import { questions } from '$lib/types';
-	import { selected_answers } from '$lib/stores';
-	import { Button } from '$lib/components/ui/button';
-	function submit() {
-		console.log($selected_answers);
-		let correct_answers = 0;
-		for (let i = 0; i < questions.length; i++) {
-			if ($selected_answers[i] === questions[i].correct_answer) {
-				correct_answers++;
-			}
-		}
-		console.log(correct_answers);
-		return correct_answers;
-	}
+<script lang="ts">
+	import Header from '$lib/frontpage/Header.svelte';
+	import FeaturedEssay from '$lib/frontpage/FeaturedEssay.svelte';
+	import ArticleGrid from '$lib/frontpage/ArticleGrid.svelte';
+	import Footer from '$lib/frontpage/Footer.svelte';
+	import type { PageProps } from './$types';
+
+	let { data }: PageProps = $props();
+	let dataAAAAAA = data.data;
 </script>
 
-<main class="overflow-y-auto p-4">
-	<div class="space-y-8 overflow-y-auto p-4">
-		<!-- {#each questions as question, i}
-        <Question question={question} question_number={i}   />
-    {/each}
-    <Button on:click={submit}>Submit</Button> -->
-		<h1>Still Baking....</h1>
-	</div>
-</main>
+<div class="overflow-hidden font-sans">
+	<Header />
+	<main class="relative pt-16 md:pt-20">
+		<FeaturedEssay featuredEssay={dataAAAAAA.featuredEssay} />
+		<ArticleGrid articles={dataAAAAAA.articles} />
+	</main>
+
+	<Footer />
+</div>
