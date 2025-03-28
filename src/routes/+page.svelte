@@ -3,9 +3,8 @@
 	import FeaturedEssay from '$lib/frontpage/FeaturedEssay.svelte';
 	import ArticleGrid from '$lib/frontpage/ArticleGrid.svelte';
 	import Footer from '$lib/frontpage/Footer.svelte';
-	import type { PageProps } from './$types';
 
-	let { data }: PageProps = $props();
+	let { data } = $props();
 	let dataAAAAAA = data.data;
 </script>
 

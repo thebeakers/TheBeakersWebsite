@@ -10,16 +10,12 @@
 		<div class="flex h-16 items-center justify-between">
 			<!-- Logo -->
 			<a href="/" class="text-red-600">
-				<img
-					src="https://placeholder.pics/svg/128x32?text=Aeon%20Logo"
-					alt="Aeon Logo"
-					class="h-8 w-32"
-				/>
+				<img src="https://placeholder.pics/svg/128x32?text=Logo" alt="Logo" class="h-8 w-32" />
 			</a>
 
 			<!-- Navigation -->
 			<nav class="hidden space-x-6 md:flex">
-				{#each ['Philosophy', 'Science', 'Psychology', 'Society', 'Culture'] as category}
+				{#each ['Biology', 'Chemistry', 'Physics', 'Earth Science'] as category}
 					<a href={'/' + category.toLowerCase()} class="text-sm uppercase hover:text-red-600">
 						{category}
 					</a>

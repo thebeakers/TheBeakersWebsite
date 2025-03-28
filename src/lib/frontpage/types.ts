@@ -121,7 +121,7 @@ const dummyFeaturedEssay: FeaturedEssay = {
     tags: [{ name: "deep" }, { name: "featured" }],
     authors: [{ id: "author1", name: "John Doe" }],
     image: {
-        url: "https://placeholder.pics/svg/600x400", // using placeholder image
+        url: "http://localhost:5173/cats/cat.10060.jpg", // using placeholder image
         alt: "Featured Essay Image Placeholder",
         height: 400,
         width: 600,
@@ -134,7 +134,7 @@ const dummyFeaturedEssay: FeaturedEssay = {
         slug: "essays",
     },
     featuredImage: {
-        url: "https://placeholder.pics/svg/600x400", // placeholder for featured image
+        url: "http://localhost:5173/cats/cat.10060.jpg", // placeholder for featured image
         caption: "Featured image caption",
         alt: "Dummy Essay Featured Image Placeholder",
     },
@@ -144,7 +144,7 @@ const dummyFeaturedEssay: FeaturedEssay = {
 const dummyArticle1: Article = {
     id: "art-001",
     title: "Dummy Article One",
-    slug: "dummy-article-one",
+    slug: "default",
     type: "article",
     audio: null,
     standfirstShort: "A short summary for dummy article one.",
@@ -163,7 +163,7 @@ const dummyArticle1: Article = {
     tags: [{ name: "dummy" }, { name: "article" }],
     authors: [{ id: "author2", name: "Jane Smith" }],
     image: {
-        url: "https://placeholder.pics/svg/550x350", // placeholder image for article 1
+        url: "http://localhost:5173/cats/cat.2178.jpg", // placeholder image for article 1
         alt: "Dummy Article One Image Placeholder",
         height: 350,
         width: 550,
@@ -199,7 +199,7 @@ const dummyArticle2: Article = {
     tags: [{ name: "testing" }, { name: "dummy" }],
     authors: [{ id: "author3", name: "Alice Baker" }],
     image: {
-        url: "https://placeholder.pics/svg/540x360", // placeholder image for article 2
+        url: "http://localhost:5173/cats/cat.2178.jpg", // placeholder image for article 1
         alt: "Dummy Article Two Image Placeholder",
         height: 360,
         width: 540,

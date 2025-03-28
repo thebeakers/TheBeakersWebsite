@@ -30,8 +30,8 @@
 			<div class="md:col-span-1">
 				<a href="/" class="mb-6 block">
 					<img
-						src="https://placeholder.pics/svg/138x28?text=Aeon%20Logo"
-						alt="Aeon Logo"
+						src="https://placeholder.pics/svg/138x28?text=Logo"
+						alt="Logo"
 						class="w-32 text-red-600"
 					/>
 				</a>
@@ -53,24 +53,7 @@
 			</div>
 
 			<!-- Navigation Links -->
-			<div class="grid grid-cols-2 gap-8 md:col-span-2">
-				<div class="space-y-3">
-					<h3 class="text-sm font-semibold uppercase tracking-wide">Explore</h3>
-					{#each footerLinks.slice(0, 3) as link}
-						<a href={link.url} class="block text-sm transition-colors hover:text-red-600">
-							{link.title}
-						</a>
-					{/each}
-				</div>
-				<div class="space-y-3">
-					<h3 class="text-sm font-semibold uppercase tracking-wide">Connect</h3>
-					{#each footerLinks.slice(3) as link}
-						<a href={link.url} class="block text-sm transition-colors hover:text-red-600">
-							{link.title}
-						</a>
-					{/each}
-				</div>
-			</div>
+			<div class="grid grid-cols-2 gap-8 md:col-span-2"></div>
 
 			<!-- Newsletter -->
 			<div class="md:col-span-1">
@@ -95,7 +78,7 @@
 		<!-- Copyright -->
 		<div class="mt-8 border-t border-gray-200 pt-8 text-sm text-gray-500">
 			<div class="flex flex-col items-center justify-between md:flex-row">
-				<p>© {currentYear} Aeon Media Group Ltd.</p>
+				<p>© {currentYear} The Beakers</p>
 				<div class="mt-4 space-x-6 md:mt-0">
 					<a href="/terms" class="transition-colors hover:text-red-600"> Terms &amp; Conditions </a>
 					<a href="/privacy" class="transition-colors hover:text-red-600"> Privacy Policy </a>

@@ -7,7 +7,7 @@
 </script>
 
 <article class="group relative">
-	<div class="aspect-[4/3] overflow-hidden bg-gray-100">
+	<a href={`/article/${article.slug}`} class="group block aspect-[4/3] overflow-hidden bg-gray-100">
 		{#if article.type === 'video'}
 			<svg class="absolute right-4 top-4 h-12 w-12 text-white"><Play /></svg>
 		{/if}
@@ -17,14 +17,14 @@
 			alt={article.image.alt}
 			class="h-full w-full object-cover transition-transform group-hover:scale-105"
 		/>
-	</div>
+	</a>
 
 	<div class="pt-4">
 		<div class="mb-2 text-sm uppercase tracking-wide text-gray-500">
 			{article.primaryTopic.title}
 		</div>
 		<h3 class="mb-2 font-serif text-xl">
-			<a href={`/${article.slug}`} class="hover:text-red-600">
+			<a href={`/article/${article.slug}`} class="hover:text-red-600">
 				{article.title}
 			</a>
 		</h3>
