@@ -16,7 +16,7 @@
 			<!-- Navigation -->
 			<nav class="hidden space-x-6 md:flex">
 				{#each ['Biology', 'Chemistry', 'Physics', 'Earth Science'] as category}
-					<a href={'/' + category.toLowerCase()} class="text-sm uppercase hover:text-red-600">
+					<a href={'/'} class="text-sm uppercase hover:text-red-600">
 						{category}
 					</a>
 				{/each}
@@ -39,10 +39,8 @@
 						<X class="h-6 w-6" />
 					</button>
 					{#each ['Philosophy', 'Science', 'Psychology', 'Society', 'Culture'] as category}
-						<a
-							href={'/' + category.toLowerCase()}
-							class="block text-lg uppercase hover:text-red-600"
-						>
+						<!-- href={'/' + category.toLowerCase()} -->
+						<a href={'/'} class="block text-lg uppercase hover:text-red-600">
 							{category}
 						</a>
 					{/each}

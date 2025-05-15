@@ -121,7 +121,7 @@ const dummyFeaturedEssay: FeaturedEssay = {
     tags: [{ name: "deep" }, { name: "featured" }],
     authors: [{ id: "author1", name: "John Doe" }],
     image: {
-        url: "http://localhost:5173/cats/cat.10060.jpg", // using placeholder image
+        url: "/cats/cat.10060.jpg", // using placeholder image
         alt: "Featured Essay Image Placeholder",
         height: 400,
         width: 600,
@@ -134,7 +134,7 @@ const dummyFeaturedEssay: FeaturedEssay = {
         slug: "essays",
     },
     featuredImage: {
-        url: "http://localhost:5173/cats/cat.10060.jpg", // placeholder for featured image
+        url: "/cats/cat.10060.jpg", // placeholder for featured image
         caption: "Featured image caption",
         alt: "Dummy Essay Featured Image Placeholder",
     },
@@ -163,7 +163,7 @@ const dummyArticle1: Article = {
     tags: [{ name: "dummy" }, { name: "article" }],
     authors: [{ id: "author2", name: "Jane Smith" }],
     image: {
-        url: "http://localhost:5173/cats/cat.2178.jpg", // placeholder image for article 1
+        url: "/cats/cat.2178.jpg", // placeholder image for article 1
         alt: "Dummy Article One Image Placeholder",
         height: 350,
         width: 550,
@@ -199,7 +199,7 @@ const dummyArticle2: Article = {
     tags: [{ name: "testing" }, { name: "dummy" }],
     authors: [{ id: "author3", name: "Alice Baker" }],
     image: {
-        url: "http://localhost:5173/cats/cat.2178.jpg", // placeholder image for article 1
+        url: "/cats/cat.2178.jpg", // placeholder image for article 1
         alt: "Dummy Article Two Image Placeholder",
         height: 360,
         width: 540,
