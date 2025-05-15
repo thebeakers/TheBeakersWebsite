@@ -39,7 +39,20 @@
 		<!-- Main Content Section -->
 		<div class="mx-auto max-w-4xl leading-relaxed">
 			<article class="prose prose-lg prose-invert max-w-none">
-				{@html article.body}
+				<div class="prose">
+					{@html article.body
+						.replaceAll('<h1>', '<h1 class="mt-12 mb-6 text-6xl font-extrabold leading-relaxed">')
+						.replaceAll('<h2>', '<h2 class="mt-10 mb-4 text-5xl font-bold leading-relaxed">')
+						.replaceAll('<h3>', '<h3 class="mt-8 mb-3 text-4xl font-semibold leading-relaxed">')
+						.replaceAll('<h4>', '<h4 class="mt-6 mb-2 text-3xl font-semibold leading-relaxed">')
+						.replaceAll('<h5>', '<h5 class="mt-4 mb-2 text-2l leading-relaxed">')
+						.replaceAll('<h6>', '<h6 class="mt-2 mb-1 text-xl leading-relaxed">')
+						.replaceAll('<p>', '<p class="m-2  text-lg leading-relaxed">')
+						.replaceAll('<ul>', '<ul class="list-disc list-inside space-y-4 mb-4">')
+						.replaceAll('<ol>', '<ol class="list-decimal list-inside space-y-4 mb-4">')
+						.replaceAll('<li>', '<li class="ml-6 mb-1">')
+						.replaceAll(/<a\b/g, '<a class="text-blue-500 hover:underline"')}}
+				</div>
 			</article>
 		</div>
 	{:else}
