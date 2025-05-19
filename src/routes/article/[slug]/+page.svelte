@@ -51,7 +51,7 @@
 						.replaceAll('<ul>', '<ul class="list-disc list-inside space-y-4 mb-4">')
 						.replaceAll('<ol>', '<ol class="list-decimal list-inside space-y-4 mb-4">')
 						.replaceAll('<li>', '<li class="ml-6 mb-1">')
-						.replaceAll(/<a\b/g, '<a class="text-blue-500 hover:underline"')}}
+						.replaceAll(/<a\b/g, '<a class="text-blue-500 hover:underline"')}
 				</div>
 			</article>
 		</div>

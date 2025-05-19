@@ -1,10 +1,11 @@
 title = "Default Title"
 description = "Default Description"
 body = "<p>Default Body</p>"
-createdAt = "2024-02-22T16:40:18.000Z" # Example date, replace with actual
+createdAt = "2024-02-22T16:40:18.000Z"   # Example date, replace with actual
 publishedAt = "2024-02-29T16:40:18.000Z" # Example date, replace with actual
 updatedAt = ""
 lastUpdatedAt = ""
+category = "biology"
 readingTime = 10
 
 [image]

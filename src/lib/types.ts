@@ -19,6 +19,7 @@ export interface Article {
     readingTime: number;
     updatedAt: null | string;
     lastUpdatedAt: null | string;
+    category: string; // <-- CHANGED: Now mandatory
 }
 
 export interface Question {
@@ -103,6 +104,7 @@ export const defaultArticle: Article = {
     publishedAt: "2024-02-29T16:40:18.000Z",
     updatedAt: "",
     lastUpdatedAt: "",
+    category: "general", // <-- ENSURED it has a category
     image: {
         url: "https://placehold.co/600x400",
         alt: "Default Image",

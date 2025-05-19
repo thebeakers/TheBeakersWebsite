@@ -1,8 +1,16 @@
-<!-- src/lib/components/Header.svelte -->
+<!-- src/lib/frontpage/Header.svelte -->
 <script lang="ts">
 	import { fade } from 'svelte/transition';
 	let menuOpen = false;
 	import { Menu, X } from 'lucide-svelte';
+
+	const mainCategories = [
+		{ name: 'Biology', path: '/biology' },
+		{ name: 'Chemistry', path: '/chemistry' },
+		{ name: 'Physics', path: '/physics' },
+		{ name: 'Earth Science', path: '/earth' }
+		// Add more primary categories here if they have pages
+	];
 </script>
 
 <header class="fixed top-0 z-50 w-full bg-white">
@@ -15,9 +23,9 @@
 
 			<!-- Navigation -->
 			<nav class="hidden space-x-6 md:flex">
-				{#each ['Biology', 'Chemistry', 'Physics', 'Earth Science'] as category}
-					<a href={'/'} class="text-sm uppercase hover:text-red-600">
-						{category}
+				{#each mainCategories as category}
+					<a href={category.path} class="text-sm uppercase hover:text-red-600">
+						{category.name}
 					</a>
 				{/each}
 			</nav>
@@ -33,18 +41,11 @@
 	{#if menuOpen}
 		<div transition:fade class="fixed inset-0 z-50 bg-white/95">
 			<div class="p-6">
-				<!-- Mobile menu content -->
-				<nav class="space-y-4">
-					<button on:click={() => (menuOpen = !menuOpen)} class=" md:hidden">
+				<div class="mb-4 flex justify-end">
+					<button on:click={() => (menuOpen = !menuOpen)} class="md:hidden">
 						<X class="h-6 w-6" />
 					</button>
-					{#each ['Philosophy', 'Science', 'Psychology', 'Society', 'Culture'] as category}
-						<!-- href={'/' + category.toLowerCase()} -->
-						<a href={'/'} class="block text-lg uppercase hover:text-red-600">
-							{category}
-						</a>
-					{/each}
-				</nav>
+				</div>
 			</div>
 		</div>
 	{/if}

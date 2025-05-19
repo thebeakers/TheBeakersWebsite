@@ -126,3 +126,16 @@ export async function getArticleBySlug(
     const articles = await getAllArticles();
     return articles.find((article) => article.slug === slug);
 }
+
+// NEW FUNCTION
+export async function getArticlesByCategory(
+    category: string,
+    forceRefresh: boolean = false,
+): Promise<TomlArticleWithSlug[]> {
+    const allArticles = await getAllArticles(forceRefresh);
+    // Article category is now mandatory, so article.category will always exist.
+    // The ?. is kept for safety but technically not needed if types are strictly followed.
+    return allArticles.filter(
+        (article) => article.category?.toLowerCase() === category.toLowerCase(),
+    );
+}

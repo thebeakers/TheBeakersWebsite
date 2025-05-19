@@ -24,8 +24,8 @@
 </script>
 
 <footer class="border-t border-gray-200 bg-gray-50 text-gray-600">
-	<div class="mx-auto max-w-7xl px-6 py-12">
-		<div class="mb-12 grid grid-cols-1 gap-8 md:grid-cols-4">
+	<div class="mx-auto p-6">
+		<div class="mb-12 grid grid-cols-1 md:grid-cols-4">
 			<!-- Logo Column -->
 			<div class="md:col-span-1">
 				<a href="/" class="mb-6 block">
@@ -76,23 +76,14 @@
 		</div>
 
 		<!-- Copyright -->
-		<div class="mt-8 border-t border-gray-200 pt-8 text-sm text-gray-500">
-			<div class="flex flex-col items-center justify-between md:flex-row">
-				<p>© {currentYear} The Beakers</p>
-				<div class="mt-4 space-x-6 md:mt-0">
-					<a href="/terms" class="transition-colors hover:text-red-600"> Terms &amp; Conditions </a>
-					<a href="/privacy" class="transition-colors hover:text-red-600"> Privacy Policy </a>
-				</div>
+	</div>
+	<div class="border-t border-gray-200 p-4 text-sm text-gray-500">
+		<div class="flex flex-col items-center justify-between md:flex-row">
+			<p>© {currentYear} The Beakers</p>
+			<div class="mt-4 md:mt-0">
+				<a href="/terms" class="transition-colors hover:text-red-600"> Terms &amp; Conditions </a>
+				<a href="/privacy" class="transition-colors hover:text-red-600"> Privacy Policy </a>
 			</div>
 		</div>
 	</div>
-
-	<!-- Back to Top -->
-	<button
-		on:click={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-		class="fixed bottom-6 right-6 rounded-full bg-white p-3 shadow-lg transition-colors hover:bg-gray-50"
-		aria-label="Back to top"
-	>
-		<ArrowUp class="h-6 w-6" />
-	</button>
 </footer>
