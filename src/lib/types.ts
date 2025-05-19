@@ -1,12 +1,16 @@
+// src/lib/types.ts
+
+export interface Image {
+    url: string;
+    alt: string;
+    caption: string;
+}
+
 export interface Article {
     title: string;
     description: string;
     body: string;
-    image: {
-        url: string;
-        alt: string;
-        caption: string;
-    };
+    image: Image; // Use the new Image interface
     authors: Author[];
     professor: Professor;
     questions: Question[];
@@ -32,55 +36,95 @@ export interface Professor {
     name: string;
     professorBio: string;
     slug: string;
-
 }
-export let questions: Question[] = [{ 'question': 'Select the correct answer', 'answers': ['Correct', 'Incorrect', 'Incorrect', 'Incorrect'], 'correct_answer': 'Correct' },
-{ 'question': 'Select the correct answer', 'answers': ['Correct', 'Incorrect', 'Incorrect', 'Incorrect'], 'correct_answer': 'Correct' },
-{ 'question': 'Select the correct answer', 'answers': ['Correct', 'Incorrect', 'Incorrect', 'Incorrect'], 'correct_answer': 'Correct' },
-{ 'question': 'Select the correct answer', 'answers': ['Correct', 'Incorrect', 'Incorrect', 'Incorrect'], 'correct_answer': 'Correct' },
-{ 'question': 'Select the correct answer', 'answers': ['Correct', 'Incorrect', 'Incorrect', 'Incorrect'], 'correct_answer': 'Correct' },
-{ 'question': 'Select the correct answer', 'answers': ['Correct', 'Incorrect', 'Incorrect', 'Incorrect'], 'correct_answer': 'Correct' },
-{ 'question': 'Select the correct answer', 'answers': ['Correct', 'Incorrect', 'Incorrect', 'Incorrect'], 'correct_answer': 'Correct' },
-{ 'question': 'Select the correct answer', 'answers': ['Correct', 'Incorrect', 'Incorrect', 'Incorrect'], 'correct_answer': 'Correct' },
-{ 'question': 'Select the correct answer', 'answers': ['Correct', 'Incorrect', 'Incorrect', 'Incorrect'], 'correct_answer': 'Correct' },
-{ 'question': 'Select the correct answer', 'answers': ['Correct', 'Incorrect', 'Incorrect', 'Incorrect'], 'correct_answer': 'Correct' }];
 
-
-
-
-
+// This 'questions' variable seems like default/example data,
+// it's generally better to keep type definitions separate from data.
+// However, I'll leave it as it was in your original file structure.
+export let questions: Question[] = [
+    {
+        question: "Select the correct answer",
+        answers: ["Correct", "Incorrect", "Incorrect", "Incorrect"],
+        correct_answer: "Correct",
+    },
+    {
+        question: "Select the correct answer",
+        answers: ["Correct", "Incorrect", "Incorrect", "Incorrect"],
+        correct_answer: "Correct",
+    },
+    {
+        question: "Select the correct answer",
+        answers: ["Correct", "Incorrect", "Incorrect", "Incorrect"],
+        correct_answer: "Correct",
+    },
+    {
+        question: "Select the correct answer",
+        answers: ["Correct", "Incorrect", "Incorrect", "Incorrect"],
+        correct_answer: "Correct",
+    },
+    {
+        question: "Select the correct answer",
+        answers: ["Correct", "Incorrect", "Incorrect", "Incorrect"],
+        correct_answer: "Correct",
+    },
+    {
+        question: "Select the correct answer",
+        answers: ["Correct", "Incorrect", "Incorrect", "Incorrect"],
+        correct_answer: "Correct",
+    },
+    {
+        question: "Select the correct answer",
+        answers: ["Correct", "Incorrect", "Incorrect", "Incorrect"],
+        correct_answer: "Correct",
+    },
+    {
+        question: "Select the correct answer",
+        answers: ["Correct", "Incorrect", "Incorrect", "Incorrect"],
+        correct_answer: "Correct",
+    },
+    {
+        question: "Select the correct answer",
+        answers: ["Correct", "Incorrect", "Incorrect", "Incorrect"],
+        correct_answer: "Correct",
+    },
+    {
+        question: "Select the correct answer",
+        answers: ["Correct", "Incorrect", "Incorrect", "Incorrect"],
+        correct_answer: "Correct",
+    },
+];
 
 export const defaultArticle: Article = {
-    title: 'Default Title',
-    description: 'Default Description',
-    body: '<p>Default Body</p>',
+    title: "Default Title",
+    description: "Default Description",
+    body: "<p>Default Body</p>",
     readingTime: 10,
-    createdAt: '2024-02-22T16:40:18.000Z',
-    publishedAt: '2024-02-29T16:40:18.000Z',
+    createdAt: "2024-02-22T16:40:18.000Z",
+    publishedAt: "2024-02-29T16:40:18.000Z",
     updatedAt: "",
     lastUpdatedAt: "",
     image: {
-        url: 'https://placehold.co/600x400',
-        alt: 'Default Image',
-        caption: 'Default Caption'
+        url: "https://placehold.co/600x400",
+        alt: "Default Image",
+        caption: "Default Caption",
     },
     authors: [
         {
-            name: 'Default Author',
-            authorBio: 'Default Author Bio',
-            slug: 'default-author'
-        }
+            name: "Default Author",
+            authorBio: "Default Author Bio",
+            slug: "default-author",
+        },
     ],
     questions: [
         {
-            question: 'Default Question',
-            answers: ['Default Answer 1', 'Default Answer 2', 'Default Answer 3'],
-            correct_answer: 'Default Answer'
-        }
+            question: "Default Question",
+            answers: ["Default Answer 1", "Default Answer 2", "Default Answer 3"],
+            correct_answer: "Default Answer",
+        },
     ],
     professor: {
-        name: 'Default Professor',
-        professorBio: 'Default Professor Bio',
-        slug: 'default-professor'
-    }
+        name: "Default Professor",
+        professorBio: "Default Professor Bio",
+        slug: "default-professor",
+    },
 };

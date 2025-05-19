@@ -6,6 +6,7 @@
 
 	let { data } = $props();
 	let dataAAAAAA = data.data;
+	console.log(dataAAAAAA.articles.length);
 </script>
 
 <div class="overflow-hidden font-sans">
